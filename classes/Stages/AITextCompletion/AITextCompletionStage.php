@@ -1,8 +1,6 @@
 <?php
 
-require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/PlaceholderProcessor.php";
-require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/Interfaces/AbstractPipelineStage.php";
-
+require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/CorePipeFlow.php";
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/AIServices/OpenAIService.php";
 
 class AITextCompletionStage extends AbstractPipelineStage

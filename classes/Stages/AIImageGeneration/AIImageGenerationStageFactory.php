@@ -1,9 +1,6 @@
 <?php
 
-require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/Utils/Helpers.php";
-require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/Interfaces/AbstractStageFactory.php";
-require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/StageConfiguration/StageConfiguration.php";
-
+require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/CorePipeFlow.php";
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/Stages/AIImageGeneration/AIImageGenerationStage.php";
 
 class AIImageGenerationStageFactory implements AbstractStageFactory

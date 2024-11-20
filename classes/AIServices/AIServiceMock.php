@@ -1,6 +1,6 @@
 <?php
 
-require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/AIServices/AICompletionServiceInterface.php";
+require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/AIServices/AICompletionServiceInterface.php";
 
 class AIServiceMock implements AITextCompletionServiceInterface, AIImageCompletionServiceInterface
 {

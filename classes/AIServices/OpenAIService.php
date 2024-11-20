@@ -1,25 +1,7 @@
 <?php
 
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/AIServices/AICompletionException.php";
-require_once  ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/AIServices/AICompletionServiceInterface.php";
-
-// The istructions for the text completion json return format
-define('AUTO_CATEGORIES_INSTRUCTIONS', "Following a list of categories and tags available, described with a json which contains id and name fields.   
-
-*AVAILABLE CATEGORIES:* 
-%CATEGORIES%
-
-*AVAILABLE TAGS*:
-%TAGS%
-
-*INSTRUCTIONS*
-You have to read the text provided after the *TEXT CONTENT* line, and return a minimum of 0 and a maximum of %N_MAX_CATEGORIES% categories and a minimum of 0 and a maximum of %N_MAX_TAGS% tags by choosing the most appropriate categories and tags for the text provided after the *TEXT CONTENT* line.
-You must return only a valid json, without backticks and without any other formatting. The json must contain a \"categories_ids\" fields which contains an array of ids of the choosen categories, and a field \"tags_ids\" which contains an array of the ids of the choosen tags. If you didn't find any appropriate category or tag, provide an empty array.
-
-*TEXT CONTENT*
-%TEXT%
-");
-
+require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/AIServices/AICompletionServiceInterface.php";
 /**
  * OpenAI Client
  */
