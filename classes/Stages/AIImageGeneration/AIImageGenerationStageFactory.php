@@ -6,12 +6,6 @@ require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/StageCon
 
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/Stages/AIImageGeneration/AIImageGenerationStage.php";
 
-use Pipeline\Interfaces\AbstractPipelineStage;
-use Pipeline\Interfaces\AbstractStageFactory;
-use Pipeline\StageConfiguration\StageConfiguration;
-use Pipeline\StageDescriptor;
-use Pipeline\Utils\Helpers;
-
 class AIImageGenerationStageFactory implements AbstractStageFactory
 {
     public static string $defaultModel = "dall-e-2";

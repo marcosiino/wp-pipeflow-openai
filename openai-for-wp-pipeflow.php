@@ -12,9 +12,7 @@
 
 defined('ABSPATH') or die('Accesso non permesso.');
 
-
 require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/StageFactory.php";
-use Pipeline\StageFactory;
 
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/Stages/AIImageGeneration/AIImageGenerationStageFactory.php";
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/Stages/AITextCompletion/AITextCompletionStageFactory.php";

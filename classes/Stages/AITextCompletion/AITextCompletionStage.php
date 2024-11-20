@@ -5,13 +5,6 @@ require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/Interfac
 
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/AIServices/OpenAIService.php";
 
-use Pipeline\Exceptions\PipelineExecutionException;
-use Pipeline\Interfaces\AbstractPipelineStage;
-use Pipeline\PipelineContext;
-use Pipeline\PlaceholderProcessor;
-use Pipeline\StageConfiguration\StageConfiguration;
-use Pipeline\StageDescriptor;
-
 class AITextCompletionStage extends AbstractPipelineStage
 {
     private StageConfiguration $stageConfiguration;
