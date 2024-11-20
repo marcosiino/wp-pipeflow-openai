@@ -17,10 +17,9 @@ class AITextCompletionStage extends AbstractPipelineStage
      */
     public function execute(PipelineContext $context): PipelineContext
     {
-        // Takes the OpenAI api key from the context
-        $apiKey = $context->getParameter("OPENAI_API_KEY");
+        $apiKey = get_openai_apikey();
         if(is_null($apiKey)) {
-            throw new PipelineExecutionException("OpenAI API Key not set. Set the api key in the OPENAI_API_KEY context parameter of the pipeline");
+            throw new PipelineExecutionException("OpenAI API Key not set. Set the api key in the OpenAI for WP PipeFlow plugin settings");
         }
 
         $prompt = (string)$this->stageConfiguration->getSettingValue("prompt", $context, true);

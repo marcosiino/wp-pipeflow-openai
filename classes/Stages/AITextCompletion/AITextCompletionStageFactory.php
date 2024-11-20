@@ -34,9 +34,7 @@ class AITextCompletionStageFactory implements AbstractStageFactory
             "resultTo" => "(optional) The name of the context parameter to which the generated text is saved",
         );
 
-        $contextInputs = array(
-            "OPENAI_API_KEY" => "The OpenAI's API key to use to perform the image generation api request to OpenAI.",
-        );
+        $contextInputs = array();
 
         $contextOutputs = array(
             "GENERATED_TEXT_COMPLETION" => "The generated text completion string. If resultTo input settings parameter is set, the text completion is wrote into the context parameter specified there instead.",

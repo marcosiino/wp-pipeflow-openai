@@ -12,10 +12,15 @@
 
 defined('ABSPATH') or die('Accesso non permesso.');
 
+//Core PipeFlow
 require_once ABSPATH . "wp-content/plugins/wp-pipeflow/classes/Pipeline/CorePipeFlow.php";
 
+//Stages
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/Stages/AIImageGeneration/AIImageGenerationStageFactory.php";
 require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/classes/Stages/AITextCompletion/AITextCompletionStageFactory.php";
+
+//Admin pages
+require_once ABSPATH . "wp-content/plugins/openai-for-pipeflow-wp-plugin/admin/general_settings.php";
 
 /**
  * Plugin activation
@@ -44,7 +49,7 @@ add_action('init', 'oai_init');
  * Register the plugin settings
  */
 function oai_register_plugin_settings() {
-    //register_setting('openai_for_wp_pipeflow_general_options', 'openai_api_key');
+    register_setting('oai_options', 'openai_api_key');
 }
 add_action('admin_init', 'oai_register_plugin_settings');
 
@@ -61,5 +66,14 @@ add_action('plugins_loaded', 'oai_register_pipeline_stages');
  * Setups the plugin admin menu
  */
 function oai_setup_admin_menu() {
+    add_menu_page(
+        'General Settings', // Page Title
+        'OpenAI for WP PipeFlow', // Menu Title
+        'manage_options', // Capability
+        'openai-for-wp-pipeflow',
+        'oai_admin_general_settings',
+        'dashicons-admin-customizer', // Menu Icon
+        6 //Position
+    );
 }
 add_action('admin_menu', 'oai_setup_admin_menu');
