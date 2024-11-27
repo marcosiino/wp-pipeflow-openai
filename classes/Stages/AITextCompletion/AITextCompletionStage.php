@@ -40,7 +40,7 @@ class AITextCompletionStage extends AbstractPipelineStage
         }
         catch (AICompletionException $e)
         {
-            throw new PipelineExecutionException("An error occurred while performing the image completion: " . $e->getMessage());
+            throw new PipelineExecutionException("An error occurred while performing the text completion: " . $e->getMessage());
         }
 
         $context->setParameter($resultTo, $generatedOutput);
