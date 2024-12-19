@@ -3,7 +3,7 @@
  * Plugin Name: WP-PipeFlow OpenAI Stages
  * Plugin URI: https://marcosiino.it
  * Description: OpenAI integration for WP PipeFlow plugin which provides stages to requests image generations to DALL-E and text completions to ChatGPT.
- * Version: 0.9
+ * Version: 1.0.0
  * Author: Marco Siino
  * Requires Plugins: wp-pipeflow
  * Requires at least: 5.9
