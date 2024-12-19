@@ -8,6 +8,8 @@
  * Requires Plugins: wp-pipeflow
  * Requires at least: 5.9
  * Author URI: http://marcosiino.it
+ * License: GPL v3
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  */
 
 defined('ABSPATH') or die('Accesso non permesso.');
