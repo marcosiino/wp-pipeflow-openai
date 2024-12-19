@@ -1,6 +1,6 @@
 # WP-PipeFlow OpenAI Stages
 
-WP-PipeFlow OpenAI Stages is a WordPress plugin that integrates OpenAI's text and image generation capabilities into the WP-PipeFlow plugin. This plugin provides custom stages for generating text completions and images using OpenAI's models.
+WP-PipeFlow OpenAI Stages is a WordPress plugin that integrates OpenAI's text and image generation capabilities into the [WP-PipeFlow plugin](https://github.com/marcosiino/wp-pipeflow). This plugin provides custom stages for generating text completions and images using OpenAI's models.
 
 ## Features
 
